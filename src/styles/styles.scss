@@ -1,23 +1,13 @@
-@font-face {
-  font-family: 'Lato-Black';
-  src: url("../assets/fonts/Lato/Lato-Black.ttf");
-}
-@font-face {
-  font-family: 'Lato-Bold';
-  src: url("../assets/fonts/Lato/Lato-Bold.ttf");
-}
-@font-face {
-  font-family: 'Lato-Light';
-  src: url("../assets/fonts/Lato/Lato-Light.ttf");
-}
-@font-face {
-  font-family: 'Lato-Regular';
-  src: url("../assets/fonts/Lato/Lato-Regular.ttf");
-}
-@font-face {
-  font-family: 'Lato-Thin';
-  src: url("../assets/fonts/Lato/Lato-Thin.ttf");
-}
-body{
-  font-family: Lato-Regular, serif ;
-}
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'fonts/font-faces';
+
+@import 'base/base';
+
+@import 'layouts/grid';
+
+@import 'components/side-navigation-bar';
+
+@import 'icons/icon-styles';
+@import 'icons/arrow';

@@ -1,0 +1,74 @@
+.navigation {
+  height: 75rem;
+  color: #eeeeee;
+  background-image: linear-gradient(to right top, rgba($primary-dark-color, 1), rgba($secondary-color, 1));
+  padding: 2rem 0 0 2rem;
+  &__profile{
+    position: relative;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: start;
+    &--detail{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding-left: 1rem;
+      &--name{
+        font-size: 2.1rem;
+      }
+      &--job{
+        padding-top: .2rem;
+        font-size: 1.1rem;
+        font-family: Lato-Regular, serif;
+      
+      }
+    }
+    &--image{
+      width: 6rem;
+      height: 6rem;
+      shape-outside: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      background-size: cover;
+      background-image: url("../../assets/images/profile.jpg");
+    }
+  }
+  &__header{
+    font-family: Lato-Bold, serif;
+    font-size: 2.3rem;
+    font-weight: 1000;
+  }
+  &__list{
+    &__items{
+      cursor: pointer;
+      border-radius: 5px;
+      position: relative;
+      display: flex;
+      justify-content: start;
+      padding: 2rem 0;
+      backface-visibility: hidden;
+      transition: all .2s;
+      &:hover{
+        font-weight: 1000;
+        transform: scale(1.1);
+      }
+      &--label{
+        font-family: Lato-Light, serif;
+        position: absolute;
+        left: 70%;
+        top: 43%;
+        transform: translate(-43%, -50%);
+        font-size: 2rem;
+      }
+      &--icon{
+        font-size: 2rem;
+        padding-right: 2rem;
+      }
+      &--hr{
+        width: 90%;
+        color: ghostwhite;
+        height: 1px;
+      }
+    }
+  }
+}
