@@ -5,7 +5,7 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-      <p>hello world</p>
+      <p>Hello World</p>
   </React.StrictMode>,
   document.getElementById('root')
 );
