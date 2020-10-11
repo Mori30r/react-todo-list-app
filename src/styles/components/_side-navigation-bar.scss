@@ -1,5 +1,5 @@
 .navigation {
-  height: 75rem;
+  height: 100vh;
   color: #eeeeee;
   background-image: linear-gradient(to right top, rgba($primary-dark-color, 1), rgba($secondary-color, 1));
   padding: 2rem 0 0 2rem;
@@ -47,10 +47,9 @@
       justify-content: start;
       padding: 2rem 0;
       backface-visibility: hidden;
-      transition: all .2s;
+      transition: all .2s ease;
       &:hover{
-        font-weight: 1000;
-        transform: scale(1.1);
+        transform: translateY(.5rem);
       }
       &--label{
         font-family: Lato-Light, serif;
@@ -71,4 +70,10 @@
       }
     }
   }
+  //&__social{
+  //  background-color: #441D3D;
+  //  display: flex;
+  //  flex-direction: column;
+  //  justify-content: end;
+  //}
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from 'react-dom';
 
 
 export const SideNavigationBar = () => {
@@ -20,32 +19,36 @@ export const SideNavigationBar = () => {
                 </div>
                 <div className="navigation__list">
                     <div className="navigation__list__items">
-                        <div className="navigation__list__items--icon icon-arrows-circle-plus"/>
-                        <p className="navigation__list__items--label">Add New</p>
+                        <div className="navigation__list__items--icon icon-basic-home"/>
+                        <p className="navigation__list__items--label">Dashboard</p>
                     </div>
                     <hr className="navigation__list__items--hr"/>
                     <div className="navigation__list__items">
-                        <div className="navigation__list__items--icon icon-arrows-circle-plus"/>
-                        <div className="navigation__list__items--label">Add New</div>
+                        <div className="navigation__list__items--icon icon-basic-todolist-pen"/>
+                        <div className="navigation__list__items--label">Add Todo</div>
                     </div>
                     <hr className="navigation__list__items--hr"/>
                     <div className="navigation__list__items">
-                        <div className="navigation__list__items--icon icon-arrows-circle-plus"/>
-                        <div className="navigation__list__items--label">Add New</div>
-                    </div>
-                    <hr className="navigation__list__items--hr"/>
-                    <div className="navigation__list__items">
-                        <div className="navigation__list__items--icon icon-arrows-circle-plus"/>
-                        <div className="navigation__list__items--label">Add New</div>
+                        <div className="navigation__list__items--icon icon-basic-question"/>
+                        <div className="navigation__list__items--label">Help</div>
                     </div>
                     <hr className="navigation__list__items--hr"/>
                 </div>
+                {/*<div className="navigation__social">*/}
+                {/*    <div className="navigation__social--github">*/}
+                {/*        github*/}
+                {/*    </div>*/}
+                {/*    <div className="navigation__social--twitter">*/}
+                {/*        twitter*/}
+                {/*    </div>*/}
+                {/*    <div className="navigation__social--instagram">*/}
+                {/*        instagram*/}
+                {/*    </div>*/}
+                {/*    <div className="navigation__social--linkedin">*/}
+                {/*        Linkedin*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
         </div>
     )
 }
-
-ReactDOM.render(
-    <SideNavigationBar/>,
-    document.getElementById("nav")
-);

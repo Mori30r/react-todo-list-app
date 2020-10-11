@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/styles.scss';
+
+import '@djthoms/pretty-checkbox';
 import * as serviceWorker from './serviceWorker';
 import {AppRoute} from "./js/router/AppRoute";
 
