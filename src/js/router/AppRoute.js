@@ -2,7 +2,7 @@ import {BrowserRouter, Route, Switch} from "react-router-dom";
 import {Dashboard} from "../components/DashboardPage/Dashboard";
 import {AddTodo} from "../components/AddTodoPage/AddTodo";
 import React from "react";
-import {SideNavigationBar} from "../components/SideNavigationBar";
+import {SideNavigationBar} from "../components/SideNavigationBarPage/SideNavigationBar";
 
 
 export const AppRoute = () => (

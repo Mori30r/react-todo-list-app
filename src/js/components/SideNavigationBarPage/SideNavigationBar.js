@@ -35,20 +35,6 @@ export const SideNavigationBar = () => {
                     </NavLink>
                     <hr className="navigation__list__items--hr"/>
                 </div>
-                {/*<div className="navigation__social">*/}
-                {/*    <div className="navigation__social--github">*/}
-                {/*        github*/}
-                {/*    </div>*/}
-                {/*    <div className="navigation__social--twitter">*/}
-                {/*        twitter*/}
-                {/*    </div>*/}
-                {/*    <div className="navigation__social--instagram">*/}
-                {/*        instagram*/}
-                {/*    </div>*/}
-                {/*    <div className="navigation__social--linkedin">*/}
-                {/*        Linkedin*/}
-                {/*    </div>*/}
-                {/*</div>*/}
             </div>
         </div>
     )
