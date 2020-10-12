@@ -1,0 +1,42 @@
+.add {
+  padding: 2rem;
+  &__top{
+    padding-bottom: 3.4rem;
+    &__header{
+      font-size: 3rem;
+      color: $dark;
+    }
+  }
+  &__section{
+    box-shadow: 0 .5rem 1rem rgba($dark, .8);
+    padding: 2rem;
+    height: 75vh;
+    overflow-y: auto;
+    &__form{
+      padding: 1rem;
+      display: block;
+      &-label{
+        font-size: 2rem;
+        width: 100%;
+      }
+      &--title{
+        font-family: Lato-Regular, serif;
+        margin: 2rem 0;
+        padding: 1rem;
+        width: 100%;
+      }
+      &--note{
+        font-family: Lato-Regular, serif;
+        margin: 2rem 0;
+        padding: 1rem;
+        width: 100%;
+      }
+      &--date{
+        font-family: Lato-Regular, serif;
+        margin: 2rem 0;
+        padding: 1rem;
+        width: 100%;
+      }
+    }
+  }
+}

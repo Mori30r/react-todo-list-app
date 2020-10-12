@@ -1,5 +1,5 @@
 .dashboard {
-  padding: 2rem 2rem;
+  padding: 2rem;
   &__links{
 	padding-bottom: 2rem;
 	&__list{
@@ -55,7 +55,7 @@
 }
 .section__todos{
   //overflow-y: scroll;
-  background-image: linear-gradient(to right bottom, rgba($light, .8), rgba($dark, .1));
+  box-shadow: 0 .5rem 1rem rgba($dark, .8);
   padding: 2rem;
   height: 75vh;
   overflow-y: auto;

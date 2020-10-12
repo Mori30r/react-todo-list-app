@@ -1,4 +1,5 @@
 import React from "react";
+import {NavLink} from "react-router-dom";
 
 
 export const SideNavigationBar = () => {
@@ -18,20 +19,20 @@ export const SideNavigationBar = () => {
                     </div>
                 </div>
                 <div className="navigation__list">
-                    <div className="navigation__list__items">
+                    <NavLink to="/" className="navigation__list__items">
                         <div className="navigation__list__items--icon icon-basic-home"/>
                         <p className="navigation__list__items--label">Dashboard</p>
-                    </div>
+                    </NavLink>
                     <hr className="navigation__list__items--hr"/>
-                    <div className="navigation__list__items">
+                    <NavLink to="/add" className="navigation__list__items">
                         <div className="navigation__list__items--icon icon-basic-todolist-pen"/>
                         <div className="navigation__list__items--label">Add Todo</div>
-                    </div>
+                    </NavLink>
                     <hr className="navigation__list__items--hr"/>
-                    <div className="navigation__list__items">
+                    <NavLink to="/" className="navigation__list__items">
                         <div className="navigation__list__items--icon icon-basic-question"/>
                         <div className="navigation__list__items--label">Help</div>
-                    </div>
+                    </NavLink>
                     <hr className="navigation__list__items--hr"/>
                 </div>
                 {/*<div className="navigation__social">*/}

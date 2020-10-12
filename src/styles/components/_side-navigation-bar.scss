@@ -40,6 +40,8 @@
   }
   &__list{
     &__items{
+      color: $light;
+      text-decoration: none;
       cursor: pointer;
       border-radius: 5px;
       position: relative;

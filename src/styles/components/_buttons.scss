@@ -1,0 +1,21 @@
+.btn {
+  font-family: Lato-Bold, serif;
+  border-radius: 1rem;
+  color: $light;
+  padding: 1rem;
+  border: none;
+  border-bottom: 2px solid $secondary-dark-color;
+  transition: all .2s ease;
+  &:hover{
+    box-shadow: 0 1rem 2rem rgba($dark, .2);
+    transform: translateY(-.5rem);
+  }
+  &:active{
+    box-shadow: 0 1.4rem 3rem rgba($dark, .5);
+    transform: translateY(.5rem);
+    
+  }
+  &--purple{
+    background-image: linear-gradient(to right bottom, $primary-light-color, $primary-dark-color);
+  }
+}
