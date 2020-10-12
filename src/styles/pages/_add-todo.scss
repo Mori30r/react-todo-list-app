@@ -13,6 +13,7 @@
     height: 75vh;
     overflow-y: auto;
     &__form{
+      overflow-wrap: break-word;
       padding: 1rem;
       display: block;
       &-label{
@@ -24,12 +25,25 @@
         margin: 2rem 0;
         padding: 1rem;
         width: 100%;
+        transition: all .3s;
+        backface-visibility: hidden;
+        &:focus{
+          box-shadow: 0 .4rem 1.1rem rgba($dark, .2);
+          transform: translate(-.5rem);
+        }
       }
       &--note{
+        resize: none;
         font-family: Lato-Regular, serif;
         margin: 2rem 0;
-        padding: 1rem;
+        padding: 1rem 0 2.5rem 1rem ;
         width: 100%;
+        transition: all .3s;
+        backface-visibility: hidden;
+        &:focus{
+          box-shadow: 0 .4rem 1.1rem rgba($dark, .2);
+          transform: translate(-.5rem);
+        }
       }
       &--date{
         font-family: Lato-Regular, serif;

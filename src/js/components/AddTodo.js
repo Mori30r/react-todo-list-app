@@ -5,16 +5,13 @@ export const AddTodo = () => {
         <div className="col-3-of-4">
             <div className="add">
                 <div className="add__top">
-                    <h1 className="add__top__header">Add Form</h1>
+                    <h1 className="add__top__header">Create Todo</h1>
                 </div>
                 <div className="dashboard__links">
                     <div className="dashboard__links__list">
-                        <a href="#" className="dashboard__links__list--item">
-                            Add Todo
-                        </a>
-                        <a href="#" className="dashboard__links__list--item">
-                            Add Note
-                        </a>
+                        <p className="dashboard__links__list--item">
+                            Add Form
+                        </p>
                     </div>
                 </div>
                 <section className="add__section">

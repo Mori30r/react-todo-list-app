@@ -40,6 +40,7 @@
   }
   &__list{
     &__items{
+      outline: none;
       color: $light;
       text-decoration: none;
       cursor: pointer;

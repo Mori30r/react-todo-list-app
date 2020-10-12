@@ -24,9 +24,6 @@ export const DashboardTop = () => {
                     <a href="#" className="dashboard__links__list--item">
                         Todos
                     </a>
-                    <a href="#" className="dashboard__links__list--item">
-                        Notes
-                    </a>
                 </div>
             </div>
         </div>
