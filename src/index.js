@@ -1,4 +1,4 @@
-import React, {useEffect, useReducer, useState} from 'react';
+import React, {useEffect, useReducer} from 'react';
 import ReactDOM from 'react-dom';
 import './styles/styles.scss';
 import '@djthoms/pretty-checkbox';
@@ -9,6 +9,17 @@ import {TodoContext} from "./js/context/TodoContext";
 
 const TodoApp = () => {
     const [todos, dispatch] = useReducer(todoReducer, []);
+
+    useEffect(()=>{
+        const localData = localStorage.getItem('todo');
+        const todos = JSON.parse(localData);
+        dispatch({ type: 'GET_TODO', todos });
+    }, []);
+
+    useEffect(() => {
+        const stringedTodo = JSON.stringify(todos) ;
+        localStorage.setItem('todo', stringedTodo);
+    }, [todos]);
 
     return(
         <TodoContext.Provider value={{todos, dispatch}}>

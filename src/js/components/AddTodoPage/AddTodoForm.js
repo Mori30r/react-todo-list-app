@@ -9,6 +9,7 @@ export const AddTodoForm = () => {
 
     const handleSubmitForm = (e) => {
         e.preventDefault();
+        e.target.reset();
         dispatch({ type: 'ADD_TODO', title, note });
         setTodo('');
         setNote('');
@@ -17,7 +18,7 @@ export const AddTodoForm = () => {
     return (
         <form onSubmit={handleSubmitForm} className="add__section__form">
             <label htmlFor="title" className="add__section__form-label">Title:</label>
-            <input onChange={(e) => setTodo(e.target.value)} id="title" type="text" className="add__section__form--title"/>
+            <input onChange={(e) => setTodo(e.target.value)} id="title" type="text" className="add__section__form--title" required={true}/>
             <label htmlFor="note" className="add__section__form-label">Note:</label>
             <textarea onChange={(e) => setNote(e.target.value)} id="note" className="add__section__form--note"/>
             {/*<label htmlFor="date" className="add__section__form-label">Date:</label>*/}
