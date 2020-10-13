@@ -4,15 +4,18 @@ import {TodoContext} from "../../context/TodoContext";
 export const AddTodoForm = (props) => {
 
     const [title, setTitle] = useState('');
-    const [note, setNote] = useState('');
+    const [note, setNote] = useState([]);
+    const { dispatch } = useContext(TodoContext);
 
     const onSubmitForm = (e) => {
         e.preventDefault();
         e.target.reset();
-        props.handleSubmitForm({
+        props.handleRefreshPage();
+        dispatch({
+            type: 'ADD_TODO',
             title,
             note
-        })
+        });
     }
 
     return (

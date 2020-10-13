@@ -5,7 +5,10 @@ export const todoReducer = (state, action) => {
         case 'ADD_TODO':
             return [
                 ...state,
-                {title: action.title, note: action.note}
+                {
+                    title: action.title,
+                    note: action.note
+                }
             ];
         default:
             return state;

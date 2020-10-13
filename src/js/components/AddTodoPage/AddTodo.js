@@ -4,9 +4,7 @@ import {AddTodoForm} from "./AddTodoForm";
 import {TodoContext} from "../../context/TodoContext";
 
 export const AddTodo = (props) => {
-    const { dispatch } = useContext(TodoContext);
-    const handleSubmitForm = (title, note) => {
-        dispatch({ type: 'ADD_TODO', title, note });
+    const handleRefreshPage = () => {
         props.history.push('/');
     }
     return(
@@ -14,7 +12,7 @@ export const AddTodo = (props) => {
             <div className="add">
                 <AddTodoTop/>
                 <section className="add__section">
-                    <AddTodoForm handleSubmitForm={handleSubmitForm}  />
+                    <AddTodoForm handleRefreshPage={handleRefreshPage}  />
                 </section>
             </div>
         </div>

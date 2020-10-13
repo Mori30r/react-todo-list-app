@@ -1,15 +1,14 @@
 import React from "react";
 
 
-export const TodoListItem = (props) => {
-    console.log(props);
+export const TodoListItem = ({todo}) => {
     return (
         <div className="section__todos__list__item">
             <div className="section__todos__list__item--left">
                 <div className="pretty p-default p-curve">
                     <input className="section__todos__list__item--left-input" type="checkbox"/>
                     <div className="section__todos__list__item--radio state p-primary-o">
-                        <label className="section__todos__list__item--title" >{props.todo.title.title}</label>
+                        <label className="section__todos__list__item--title" >{todo.title}</label>
                     </div>
                 </div>
             </div>

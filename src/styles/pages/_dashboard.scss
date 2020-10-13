@@ -60,6 +60,10 @@
   height: 75vh;
   overflow-y: auto;
   &__list{
+	&--empty{
+	  font-size: 2rem;
+	  color: #441D3D;
+	}
 	&__item{
 	  padding: 2rem 0;
 	  display: flex;
