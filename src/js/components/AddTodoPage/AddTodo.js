@@ -5,8 +5,6 @@ import {TodoContext} from "../../context/TodoContext";
 
 export const AddTodo = (props) => {
     const { dispatch } = useContext(TodoContext);
-
-
     const handleSubmitForm = (title, note) => {
         dispatch({ type: 'ADD_TODO', title, note });
         props.history.push('/');

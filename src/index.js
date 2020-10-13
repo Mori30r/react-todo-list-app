@@ -8,12 +8,15 @@ import {todoReducer} from "./js/reducers/TodoReducer";
 import {TodoContext} from "./js/context/TodoContext";
 
 const TodoApp = () => {
+
     const [todos, dispatch] = useReducer(todoReducer, []);
 
     useEffect(()=>{
         const localData = localStorage.getItem('todo');
         const todos = JSON.parse(localData);
-        dispatch({ type: 'GET_TODO', todos });
+        if (todos){
+            dispatch({ type: 'GET_TODO', todos });
+        }
     }, []);
 
     useEffect(() => {

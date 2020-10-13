@@ -21,7 +21,7 @@ export const DashboardTop = () => {
             </div>
             <div className="dashboard__links">
                 <div className="dashboard__links__list">
-                    <p href="#" className="dashboard__links__list--item">
+                    <p className="dashboard__links__list--item">
                         Todos
                     </p>
                 </div>
