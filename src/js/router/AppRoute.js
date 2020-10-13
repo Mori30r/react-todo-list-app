@@ -10,8 +10,8 @@ export const AppRoute = () => (
         <div className="row" >
             <SideNavigationBar/>
             <Switch>
-                <Route path='/' component={Dashboard} exact={true} />
-                <Route path='/add' component={AddTodo} />
+                <Route path='/' render={(props)=> <Dashboard {...props} />} exact={true} />
+                <Route path='/add' render={(props)=> <AddTodo {...props} />} exact={true} />
             </Switch>
         </div>
     </BrowserRouter>
