@@ -69,20 +69,37 @@
 	  display: flex;
 	  justify-content: space-between;
 	  &--right{
-		
+		align-items: center;
+		width: 10rem;
+		display: flex;
+		justify-content: space-between;
 	  }
 	  &--left{
 		display: flex;
 		justify-content: start;
 	  }
 	  &--radio{
-		padding-left: 3rem;
+		padding: 1rem;
 	  }
 	  &--title{
 		
 	  }
 	  &--date{
 		
+	  }
+	  &--remove{
+		font-family: Lato-Bold, serif;
+		padding: .4rem;
+		background-color: red;
+		color: $light;
+		border: none;
+		border-radius: 10px;
+		transition: all .5s;
+		backface-visibility: hidden;
+		cursor: pointer;
+		&:hover{
+		  box-shadow: 0 1rem 2rem rgba(black, .4);
+		}
 	  }
 	}
   }

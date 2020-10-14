@@ -1,7 +1,6 @@
-import React, {useContext, useState} from "react";
+import React from "react";
 import {AddTodoTop} from "./AddTodoTop";
 import {AddTodoForm} from "./AddTodoForm";
-import {TodoContext} from "../../context/TodoContext";
 
 export const AddTodo = (props) => {
     const handleRefreshPage = () => {

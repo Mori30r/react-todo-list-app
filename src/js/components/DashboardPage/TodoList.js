@@ -11,7 +11,7 @@ export const TodoList = () => {
             {
                 todos.length > 0
                     ?
-                    todos.map((todo)=>{return <TodoListItem key={uuid()} todo={todo}/>})
+                    todos.map((todo)=>{return <TodoListItem key={todo.id} todo={todo}/>})
                     :
                     <p className="section__todos__list--empty">Add Todo To Show In This Page</p>
             }

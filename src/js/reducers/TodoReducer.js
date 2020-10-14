@@ -7,9 +7,12 @@ export const todoReducer = (state, action) => {
                 ...state,
                 {
                     title: action.title,
-                    note: action.note
+                    note: action.note,
+                    id: action.id
                 }
             ];
+        case 'REMOVE_TODO':
+            return state.filter((todo) => todo.id !== action.id);
         default:
             return state;
     }

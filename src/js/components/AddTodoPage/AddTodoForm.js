@@ -1,6 +1,6 @@
 import React, {useContext, useState} from "react";
 import {TodoContext} from "../../context/TodoContext";
-
+import {v4 as uuid} from 'uuid';
 export const AddTodoForm = (props) => {
 
     const [title, setTitle] = useState('');
@@ -14,7 +14,8 @@ export const AddTodoForm = (props) => {
         dispatch({
             type: 'ADD_TODO',
             title,
-            note
+            note,
+            id: uuid()
         });
     }
 
