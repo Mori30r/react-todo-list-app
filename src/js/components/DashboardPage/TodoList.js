@@ -13,7 +13,7 @@ export const TodoList = () => {
                     ?
                     todos.map((todo)=>{return <TodoListItem key={todo.id} todo={todo}/>})
                     :
-                    <p className="section__todos__list--empty">Add Todo To Show In This Page</p>
+                    <p className="section__todos__list--empty">Your todo list is empty</p>
             }
         </div>
     )

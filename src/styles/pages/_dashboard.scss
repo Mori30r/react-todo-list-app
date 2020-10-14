@@ -60,14 +60,20 @@
   height: 75vh;
   overflow-y: auto;
   &__list{
-	&--empty{
+	&--empty {
+	  text-align: center;
+	  font-family: Lato-Bold, serif;
 	  font-size: 2rem;
 	  color: #441D3D;
 	}
 	&__item{
-	  padding: 2rem 0;
+	  border-radius: 5px;
+	  padding: 1rem;
 	  display: flex;
 	  justify-content: space-between;
+	  &:nth-child(odd){
+		background-color: lighten($dark, 70%);
+	  }
 	  &--right{
 		align-items: center;
 		width: 10rem;
@@ -82,13 +88,20 @@
 		padding: 1rem;
 	  }
 	  &--title{
+		font-size: 1.4rem;
+		font-family: Lato-Bold, serif;
+		
 		
 	  }
 	  &--date{
 		
 	  }
 	  &--remove{
-		font-family: Lato-Bold, serif;
+		text-align: center;
+		width: 2.5rem;
+		height: 2.5rem;
+		font-size: 1rem;
+		font-family: Lato-Black, serif;
 		padding: .4rem;
 		background-color: red;
 		color: $light;
@@ -97,8 +110,10 @@
 		transition: all .5s;
 		backface-visibility: hidden;
 		cursor: pointer;
+		clip-path: circle(50% at 50% 50%);
 		&:hover{
 		  box-shadow: 0 1rem 2rem rgba(black, .4);
+		  background-color: darken(red, 30%);
 		}
 	  }
 	}
