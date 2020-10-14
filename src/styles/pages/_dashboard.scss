@@ -76,44 +76,51 @@
 	  }
 	  &--right{
 		align-items: center;
-		width: 10rem;
+		width: 15rem;
 		display: flex;
 		justify-content: space-between;
+		&--date{
+		  font-size: 1.2rem;
+		  color: $dark;
+		}
+		&--edit{
+		  text-decoration: none;
+		  font-size: 1.2rem;
+		  color: dodgerblue;
+		  font-family: Lato-Bold, serif;
+		}
+		&--remove{
+		  text-align: center;
+		  width: 2.5rem;
+		  height: 2.5rem;
+		  font-size: 1rem;
+		  font-family: Lato-Black, serif;
+		  padding: .4rem;
+		  background-color: red;
+		  color: $light;
+		  border: none;
+		  border-radius: 10px;
+		  transition: all .5s;
+		  backface-visibility: hidden;
+		  cursor: pointer;
+		  clip-path: circle(50% at 50% 50%);
+		  &:hover{
+			box-shadow: 0 1rem 2rem rgba(black, .4);
+			background-color: darken(red, 30%);
+		  }
+		}
 	  }
 	  &--left{
 		display: flex;
 		justify-content: start;
-	  }
-	  &--radio{
-		padding: 1rem;
-	  }
-	  &--title{
-		font-size: 1.4rem;
-		font-family: Lato-Bold, serif;
-		
-		
-	  }
-	  &--date{
-		
-	  }
-	  &--remove{
-		text-align: center;
-		width: 2.5rem;
-		height: 2.5rem;
-		font-size: 1rem;
-		font-family: Lato-Black, serif;
-		padding: .4rem;
-		background-color: red;
-		color: $light;
-		border: none;
-		border-radius: 10px;
-		transition: all .5s;
-		backface-visibility: hidden;
-		cursor: pointer;
-		clip-path: circle(50% at 50% 50%);
-		&:hover{
-		  box-shadow: 0 1rem 2rem rgba(black, .4);
-		  background-color: darken(red, 30%);
+		&--radio{
+		  padding: 1rem;
+		}
+		&--title{
+		  font-size: 1.4rem;
+		  font-family: Lato-Bold, serif;
+		  text-decoration: none;
+		  color: #333333;
 		}
 	  }
 	}

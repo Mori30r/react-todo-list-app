@@ -13,7 +13,7 @@
 }
 
 [data-icon]:before {
-  font-family: "linea-basic-10" !important;
+  font-family: "linea-basic-10";
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
