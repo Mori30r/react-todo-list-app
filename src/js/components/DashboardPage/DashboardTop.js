@@ -1,6 +1,13 @@
-import React from "react";
+import React, {useContext} from "react";
+import {FilterContext} from "../../context/FilterContext";
 
 export const DashboardTop = () => {
+    const { filterDispatch } = useContext(FilterContext);
+
+    const handleSearch = (e) => {
+        const title = e.target.value;
+        filterDispatch({ type: 'SET_SEARCH', search: title });
+    }
     return (
         <div>
             <div className="dashboard__top">
@@ -8,7 +15,7 @@ export const DashboardTop = () => {
                 <div className="dashboard__top__select">
                     <div className="dashboard__top__select__inputs">
                         <div className="dashboard__top__select__inputs--search">
-                            <input type="text" placeholder="Search" autoFocus={true} className="dashboard__top__select__inputs--search-input"/>
+                            <input onChange={handleSearch} type="text" placeholder="Search" autoFocus={true} className="dashboard__top__select__inputs--search-input"/>
                         </div>
                         <div className="dashboard__top__select__inputs--sort">
                             <select className="dashboard__top__select__inputs--sort-select" >
