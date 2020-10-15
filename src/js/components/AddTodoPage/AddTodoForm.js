@@ -15,7 +15,8 @@ export const AddTodoForm = (props) => {
             type: 'ADD_TODO',
             title,
             note,
-            id: uuid()
+            id: uuid(),
+            checked: false
         });
     }
 

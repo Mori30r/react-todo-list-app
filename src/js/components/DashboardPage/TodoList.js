@@ -1,7 +1,6 @@
 import {TodoListItem} from "./TodoListItem";
 import {TodoContext} from "../../context/TodoContext";
 import React, {useContext} from "react";
-import { v4 as uuid } from 'uuid';
 
 
 export const TodoList = () => {

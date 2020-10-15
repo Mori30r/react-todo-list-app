@@ -1,23 +1,32 @@
 import React, {useContext, useState} from "react";
 import {TodoContext} from "../../context/TodoContext";
 import {NavLink} from "react-router-dom";
+import {v4 as uuid} from "uuid";
 
 
 export const TodoListItem = ({todo}) => {
-    const [check, setCheck] = useState(false);
     const { dispatch } = useContext(TodoContext);
     const handleRemoveItem = () =>{
         dispatch( { type: 'REMOVE_TODO', id: todo.id });
     }
     const handleCheckBoxChange = () => {
-        return check ? setCheck(false) : setCheck(true);
+        return dispatch(
+            {
+                type: 'EDIT_TODO',
+                id: todo.id,
+                updates: {
+                    title: todo.title,
+                    note: todo.note,
+                    id: todo.id,
+                    checked: !todo.checked
+            }});
     }
     return (
         <div className="section__todos__list__item">
             <div className="section__todos__list__item--left">
-                <input onChange={handleCheckBoxChange} checked={check} className="section__todos__list__item--left-input" type="checkbox"/>
+                <input onChange={handleCheckBoxChange} checked={todo.checked} className="section__todos__list__item--left-input" type="checkbox"/>
                 <div className="section__todos__list__item--left--radio state p-primary-o">
-                    <NavLink style={{ textDecoration: check && "line-through" }} to={`edit/${todo.id}`} className="section__todos__list__item--left--title" >{todo.title}</NavLink>
+                    <NavLink style={{ textDecoration: todo.checked && "line-through", color: todo.checked && "grey" }} to={`edit/${todo.id}`} className="section__todos__list__item--left--title" >{todo.title}</NavLink>
                 </div>
             </div>
             <div className="section__todos__list__item--right">
