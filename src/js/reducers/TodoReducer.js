@@ -1,3 +1,5 @@
+import moment from "moment";
+
 export const todoReducer = (state, action) => {
     switch (action.type){
         case 'GET_TODO':
@@ -9,7 +11,8 @@ export const todoReducer = (state, action) => {
                     title: action.title,
                     note: action.note,
                     id: action.id,
-                    checked: action.checked
+                    checked: action.checked,
+                    date: action.date
                 }
             ];
         case 'REMOVE_TODO':

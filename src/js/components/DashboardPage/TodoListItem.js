@@ -1,11 +1,13 @@
 import React, {useContext, useState} from "react";
 import {TodoContext} from "../../context/TodoContext";
 import {NavLink} from "react-router-dom";
-import {v4 as uuid} from "uuid";
-
+import moment from "moment";
 
 export const TodoListItem = ({todo}) => {
     const { dispatch } = useContext(TodoContext);
+    const now = moment();
+    const date = moment.unix(todo.date);
+    const difference = now.diff(date, 'days');
     const handleRemoveItem = () =>{
         dispatch( { type: 'REMOVE_TODO', id: todo.id });
     }
@@ -18,9 +20,18 @@ export const TodoListItem = ({todo}) => {
                     title: todo.title,
                     note: todo.note,
                     id: todo.id,
-                    checked: !todo.checked
+                    checked: !todo.checked,
+                    date: todo.date
             }});
     }
+    const handleDateShow = () => {
+        if(difference === 0){
+            return  'Today'
+        } else {
+            return  `${difference} days ago`;
+        }
+    }
+
     return (
         <div className="section__todos__list__item">
             <div className="section__todos__list__item--left">
@@ -30,7 +41,7 @@ export const TodoListItem = ({todo}) => {
                 </div>
             </div>
             <div className="section__todos__list__item--right">
-                <div className="section__todos__list__item--right--date">2 days ago</div>
+                <div className="section__todos__list__item--right--date">{handleDateShow()}</div>
                 <NavLink to={`edit/${todo.id}`} className="section__todos__list__item--right--edit">Edit</NavLink>
                 <button onClick={handleRemoveItem } className="section__todos__list__item--right--remove">X</button>
             </div>

@@ -31,7 +31,8 @@ export const EditTodoForm = (props) => {
                 title: editedTitle,
                 note: editedNote,
                 id: todo.id,
-                checked: todo.checked
+                checked: todo.checked,
+                date: todo.date
             }
         });
     }

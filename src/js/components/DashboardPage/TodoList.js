@@ -11,8 +11,9 @@ export const TodoList = () => {
     if ( filter.sort === 'alphabetical' ){
         const result = todos.filter((obj)=>obj.title.toLowerCase().includes(filter.search.toLowerCase()));
         resultFiltered = result.sort((a, b) => a.title.localeCompare(b.title));
-    } else {
-        resultFiltered = todos.filter((obj)=>obj.title.toLowerCase().includes(filter.search.toLowerCase()));
+    } if(filter.sort === 'date') {
+        const result = todos.filter((obj)=>obj.title.toLowerCase().includes(filter.search.toLowerCase()));
+        resultFiltered = result.sort((a, b) => a.date.localeCompare(b.date));
     }
 
     return (
