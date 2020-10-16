@@ -6,14 +6,21 @@ import {FilterContext} from "../../context/FilterContext";
 export const TodoList = () => {
     const { todos } = useContext(TodoContext);
     const { filter } = useContext(FilterContext);
-    const filtered = todos.filter((obj)=>obj.title.toLowerCase().includes(filter.search.toLowerCase()));
+    let resultFiltered;
+
+    if ( filter.sort === 'alphabetical' ){
+        const result = todos.filter((obj)=>obj.title.toLowerCase().includes(filter.search.toLowerCase()));
+        resultFiltered = result.sort((a, b) => a.title.localeCompare(b.title));
+    } else {
+        resultFiltered = todos.filter((obj)=>obj.title.toLowerCase().includes(filter.search.toLowerCase()));
+    }
 
     return (
         <div className="section__todos__list">
             {
-                filtered.length > 0
+                resultFiltered.length > 0
                     ?
-                    filtered.map((todo)=>{return <TodoListItem key={todo.id} todo={todo}/>})
+                    resultFiltered.map((todo)=>{return <TodoListItem key={todo.id} todo={todo}/>})
                     :
                     <p className="section__todos__list--empty">Your todo list is empty</p>
 

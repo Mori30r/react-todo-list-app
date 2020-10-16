@@ -8,6 +8,11 @@ export const DashboardTop = () => {
         const title = e.target.value;
         filterDispatch({ type: 'SET_SEARCH', search: title });
     }
+
+    const sortHandle = (e) => {
+        const sort = e.target.value;
+        filterDispatch( { type: 'SET_SORT', sort });
+    }
     return (
         <div>
             <div className="dashboard__top">
@@ -18,8 +23,8 @@ export const DashboardTop = () => {
                             <input onChange={handleSearch} type="text" placeholder="Search" autoFocus={true} className="dashboard__top__select__inputs--search-input"/>
                         </div>
                         <div className="dashboard__top__select__inputs--sort">
-                            <select className="dashboard__top__select__inputs--sort-select" >
-                                <option className="dashboard__top__select__inputs--sort-select--option" value="amount">Amount</option>
+                            <select onChange={sortHandle} className="dashboard__top__select__inputs--sort-select" >
+                                <option className="dashboard__top__select__inputs--sort-select--option" value="alphabetical">Alphabetical</option>
                                 <option className="dashboard__top__select__inputs--sort-select--option" value="date">Date</option>
                             </select>
                         </div>

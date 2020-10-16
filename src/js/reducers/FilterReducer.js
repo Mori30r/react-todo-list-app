@@ -5,6 +5,11 @@ export const filterReducer = (state, action) => {
                 ...state,
                 search: action.search
             }
+        case 'SET_SORT':
+            return {
+                ...state,
+                sort: action.sort
+            }
         default:
             return state;
     }
