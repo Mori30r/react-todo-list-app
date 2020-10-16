@@ -6,6 +6,7 @@ export const AddTodo = (props) => {
     const handleRefreshPage = () => {
         props.history.push('/');
     }
+
     return(
         <div className="col-3-of-4">
             <div className="add">

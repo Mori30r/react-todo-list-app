@@ -111,6 +111,9 @@
 		}
 	  }
 	  &--left{
+		&-input{
+		  outline: none;
+		}
 		display: flex;
 		justify-content: start;
 		&--radio{

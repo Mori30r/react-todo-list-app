@@ -1,6 +1,6 @@
 import {TodoListItem} from "./TodoListItem";
 import {TodoContext} from "../../context/TodoContext";
-import React, {useContext, useEffect, useMemo, useRef, useState} from "react";
+import React, {useContext} from "react";
 import {FilterContext} from "../../context/FilterContext";
 
 export const TodoList = () => {
