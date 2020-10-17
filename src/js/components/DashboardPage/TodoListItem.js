@@ -7,7 +7,7 @@ export const TodoListItem = ({todo}) => {
     const { dispatch } = useContext(TodoContext);
     const now = moment();
     const date = moment.unix(todo.date);
-    const difference = now.diff(date, 'days');
+    const difference = now.diff(date, 'minutes');
     const handleRemoveItem = () =>{
         dispatch( { type: 'REMOVE_TODO', id: todo.id });
     }
@@ -24,11 +24,16 @@ export const TodoListItem = ({todo}) => {
                     date: todo.date
             }});
     }
+
     const handleDateShow = () => {
-        if(difference === 0){
-            return  'Today'
-        } else {
-            return  `${difference} days ago`;
+        if (difference < 60) {
+            return `${difference} minutes ago`;
+        } else if (difference > 60) {
+            return `${now.diff(date, 'hours')} hours ago`;
+        } else if (difference > 1440) {
+            return `${now.diff(date, 'days')} days ago`;
+        } else if (difference > 43200) {
+            return `${now.diff(date, 'months')} months ago`;
         }
     }
 

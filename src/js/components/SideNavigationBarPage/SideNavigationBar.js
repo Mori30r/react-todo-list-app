@@ -29,11 +29,6 @@ export const SideNavigationBar = () => {
                         <div className="navigation__list__items--label">Add Todo</div>
                     </NavLink>
                     <hr className="navigation__list__items--hr"/>
-                    <NavLink to="/" className="navigation__list__items">
-                        <div className="navigation__list__items--icon icon-basic-question"/>
-                        <div className="navigation__list__items--label">Help</div>
-                    </NavLink>
-                    <hr className="navigation__list__items--hr"/>
                 </div>
             </div>
         </div>

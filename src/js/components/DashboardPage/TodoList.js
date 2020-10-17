@@ -13,7 +13,7 @@ export const TodoList = () => {
         resultFiltered = result.sort((a, b) => a.title.localeCompare(b.title));
     } if(filter.sort === 'date') {
         const result = todos.filter((obj)=>obj.title.toLowerCase().includes(filter.search.toLowerCase()));
-        resultFiltered = result.sort((a, b) => a.date.localeCompare(b.date));
+        resultFiltered = result.sort((a, b) => b.date.localeCompare(a.date));
     }
 
     return (

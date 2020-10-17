@@ -112,9 +112,9 @@
 	  &--left{
 		&-input{
 		  outline: none;
+		  align-self: center;
 		}
 		display: flex;
-		justify-content: start;
 		&--radio{
 		  padding: 1rem;
 		}

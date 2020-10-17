@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import {FilterContext} from "../../context/FilterContext";
 
 export const DashboardTop = () => {
-    const { filterDispatch } = useContext(FilterContext);
+    const { filter ,filterDispatch } = useContext(FilterContext);
 
     const handleSearch = (e) => {
         const title = e.target.value;
@@ -23,7 +23,7 @@ export const DashboardTop = () => {
                             <input onChange={handleSearch} type="text" placeholder="Search" autoFocus={true} className="dashboard__top__select__inputs--search-input"/>
                         </div>
                         <div className="dashboard__top__select__inputs--sort">
-                            <select onChange={sortHandle} className="dashboard__top__select__inputs--sort-select" >
+                            <select value={filter.sort} onChange={sortHandle} className="dashboard__top__select__inputs--sort-select" >
                                 <option className="dashboard__top__select__inputs--sort-select--option" value="alphabetical">Alphabetical</option>
                                 <option className="dashboard__top__select__inputs--sort-select--option" value="date">Date</option>
                             </select>
